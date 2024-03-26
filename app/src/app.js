@@ -4,6 +4,7 @@ const server = express();
 
 const customerRoutes = require("./routes/customerRoutes");
 const productRoutes = require("./routes/productRoutes");
+const eventRouter = require("./routes/eventRoutes");
 
 const ConnectToDB = require("./dataBase");
 
@@ -13,6 +14,7 @@ server.use(express.json());
 
 server.use("/api", customerRoutes);
 server.use("/api", productRoutes);
+server.use("/api", eventRouter);
 
 const port = 3000;
 
